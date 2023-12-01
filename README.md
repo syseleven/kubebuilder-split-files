@@ -29,7 +29,7 @@ Then you can add the following new targets to your Makefile:
 
 ```
 get-split-files:
-	go get -u github.com/syseleven/kubebuilder-split-files
+	go install github.com/syseleven/kubebuilder-split-files@latest
 
 generate-chart: kustomize get-split-files
 	$(KUSTOMIZE) build config/default | ~/go/bin/kubebuilder-split-files --chart-dir ./charts --operator-name my-operator --image registry.example.com/orga/my-operator:1.2.3
